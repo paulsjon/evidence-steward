@@ -1,0 +1,11 @@
+{
+  "networks": [
+    {
+      "name": "metformin_evidence_steward"
+    }
+  ],
+  "actions": {
+    "version": 1,
+    "module": "./bridge-actions.js"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "brand": "Metformin Evidence Steward",
+  "networks": [
+    {
+      "name": "metformin_evidence_steward",
+      "front_man": "evidence_steward",
+      "hocon": "./metformin_evidence_steward.network.json",
+      "description": "Ask what the published evidence on metformin says, with the qualifiers that keep it true, or have a draft answer checked for lost context.",
+      "tags": [
+        "agentified-website",
+        "evidence-steward",
+        "medical-affairs"
+      ],
+      "sample_queries": [
+        "I practise in the US. Does metformin prevent long COVID?",
+        "Check this draft for a UK clinician: Metformin reduces long COVID by 41%.",
+        "Is metformin still contraindicated when serum creatinine is 1.5 mg/dL or above in men?",
+        "Is metformin approved for preventing type 2 diabetes in the UK, and in the US?",
+        "What dose of metformin should my patient with an eGFR of 38 take?"
+      ]
+    }
+  ],
+  "llm_router": {
+    "base_url": "https://api.otari.ai/api/v1",
+    "mock": false,
+    "byok_router": "https://api.otari.ai/api/v1"
+  },
+  "allowed_peers": [],
+  "peer_policy": {
+    "mode": "closed",
+    "deny_origins": [],
+    "note": "Local agents and page-local actions only. Calls no partner sites."
+  },
+  "agent_mcp": {
+    "protocol": "nsdeploy-agent-mcp/v1",
+    "network": "metformin_evidence_steward",
+    "front_man": "evidence_steward",
+    "available": false,
+    "reason": "This is a static bundle; a public MCP facade requires an application host."
+  },
+  "theme": {
+    "primary": "#1f4e5f"
+  },
+  "linking": {
+    "protocol": "nsdeploy-link/v1",
+    "exports": [
+      {
+        "network": "metformin_evidence_steward",
+        "front_man": "evidence_steward",
+        "aliases": [
+          "metformin_evidence_steward",
+          "evidence_steward"
+        ],
+        "url": "metformin_evidence_steward"
+      }
+    ],
+    "imports": [],
+    "link_updates": {
+      "mode": "browser-local"
+    }
+  },
+  "deployment": {
+    "mode": "static",
+    "self_contained_runtime": true,
+    "browser_mock": false,
+    "direct_byok": true,
+    "direct_mcp_requires_cors": true,
+    "public_mcp_facade": false
+  },
+  "actions": {
+    "version": 1,
+    "module": "./site-actions.js",
+    "bridge": "./bridge/action-bridge.html",
+    "agentTools": [
+      "get_steward_info",
+      "find_claims",
+      "check_draft"
+    ]
+  }
+}

@@ -1,0 +1,1018 @@
+{
+  "profile": "evidence-envelope/0.1",
+  "steward": {
+    "name": "Metformin Evidence Steward",
+    "operator": "Jon Pauls (individual demonstration entry)",
+    "scope": "Metformin only: approved uses from public labels, and published evidence on uses clinicians ask about.",
+    "status": "Illustrative demonstration for the Open Agentic Web Challenge. Not affiliated with any manufacturer. Not medical advice. Jurisdiction rules are illustrative and pending legal review.",
+    "ledger_version": "0.1.0",
+    "approval_state": "Draft ledger: every claim is pending approval by the steward approver.",
+    "principles": [
+      "A witness, not an advocate: answers only for its own claims, and only what was asked.",
+      "Questions, not pushes: never volunteers information on unapproved uses.",
+      "Every claim travels with its qualifiers, sources and verified-as-of date.",
+      "The asker's declared practice location selects label status and reporting route; it is not verified."
+    ],
+    "jurisdictions": {
+      "US": {
+        "label": "United States",
+        "label_source": "FDA prescribing information (DailyMed)",
+        "adverse_event_route": "FDA MedWatch: https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program",
+        "note": "Answers to a clinician's question follow the unsolicited-request (medical information) route. FDA's SIUU guidance covers only firm-initiated communications, which this steward never makes."
+      },
+      "UK": {
+        "label": "United Kingdom",
+        "label_source": "Summary of Product Characteristics (electronic medicines compendium)",
+        "adverse_event_route": "MHRA Yellow Card: https://yellowcard.mhra.gov.uk/",
+        "note": "Label status is taken from UK SmPCs only."
+      },
+      "DE": {
+        "label": "Germany",
+        "label_source": "Fachinformation (not yet checked by the steward)",
+        "adverse_event_route": "BfArM adverse drug reaction reporting: https://www.bfarm.de/EN/Medicinal-products/Pharmacovigilance/_node.html",
+        "note": "German label status has not been verified for any claim yet."
+      }
+    },
+    "correction_route": "Report a misrepresentation or ask for a correction on the steward's public issue tracker: https://github.com/paulsjon/evidence-steward/issues"
+  },
+  "digest_method": "SHA-256 over the claim's canonical JSON (keys sorted, no whitespace), without the digest field",
+  "claims": [
+    {
+      "claim_id": "M-01",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "label",
+      "topics": [
+        "indication",
+        "approved use",
+        "type 2 diabetes",
+        "children",
+        "pediatric",
+        "extended-release"
+      ],
+      "statement": "Metformin hydrochloride tablets are indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+      "population": "Adults and children 10 years and older with type 2 diabetes (immediate-release tablets).",
+      "intervention": "Metformin hydrochloride",
+      "comparator": null,
+      "outcome": "Glycemic control",
+      "outcome_role": null,
+      "study_design": "Label",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "Regulatory label text."
+      },
+      "qualifiers": [
+        {
+          "text": "Applies to immediate-release tablets; extended-release labels are for adults only.",
+          "any_of": [
+            "immediate-release",
+            "immediate release",
+            "extended-release",
+            "adults only"
+          ]
+        },
+        {
+          "text": "Adjunct to diet and exercise.",
+          "any_of": [
+            "diet and exercise",
+            "adjunct",
+            "lifestyle"
+          ]
+        },
+        {
+          "text": "Not indicated for type 1 diabetes.",
+          "any_of": [
+            "type 1",
+            "not for type 1"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "approved",
+          "label_source": "DailyMed metformin hydrochloride tablets, section 1"
+        },
+        "UK": {
+          "status": "approved",
+          "label_source": "Glucophage SR SmPC, section 4.1 (adults); UK paediatric wording not yet checked"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "DailyMed: metformin hydrochloride tablet label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 180,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:833521819e1d316eaafd326038fa98dab1ed0919a70cc413eea555ffb2c6b23d"
+    },
+    {
+      "claim_id": "M-02",
+      "version": 1,
+      "supersedes": "M-02-old",
+      "claim_type": "label",
+      "topics": [
+        "kidney",
+        "renal",
+        "egfr",
+        "creatinine",
+        "contraindication",
+        "chronic kidney disease",
+        "ckd"
+      ],
+      "statement": "Metformin is contraindicated below an eGFR of 30 mL/min/1.73 m2. Starting it at an eGFR of 30 to 45 is not recommended. If eGFR later falls below 45, assess the benefit and risk of continuing; stop it if eGFR falls below 30. Assess renal function before starting and periodically after.",
+      "population": "Patients with or at risk of reduced kidney function.",
+      "intervention": "Metformin hydrochloride",
+      "comparator": null,
+      "outcome": "Lactic acidosis risk management",
+      "outcome_role": null,
+      "study_design": "Label",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "Regulatory label text, revised after FDA's April 2016 safety communication."
+      },
+      "qualifiers": [
+        {
+          "text": "Kidney function is measured as eGFR, not serum creatinine, since the 2016 labelling change.",
+          "any_of": [
+            "egfr",
+            "glomerular filtration"
+          ]
+        },
+        {
+          "text": "Starting at eGFR 30 to 45 is not recommended, which differs from continuing in a patient already on metformin.",
+          "any_of": [
+            "30 to 45",
+            "30-45",
+            "30–45",
+            "initiation",
+            "starting",
+            "start"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "approved",
+          "label_source": "DailyMed metformin hydrochloride tablets, sections 2.3 and 4"
+        },
+        "UK": {
+          "status": "approved",
+          "label_source": "Glucophage SR SmPC, sections 4.2 to 4.4 (contraindicated below GFR 30; dose limits by GFR band differ in wording)"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "DailyMed: metformin hydrochloride tablet label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        },
+        {
+          "title": "FDA Drug Safety Communication, 8 April 2016",
+          "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-revises-warnings-regarding-use-diabetes-medicine-metformin-certain"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 180,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:18c3ece07e62e4a7ff51a2747219656af5f9fd5e55c63239d1ace8bd8f21dd59"
+    },
+    {
+      "claim_id": "M-02-old",
+      "version": 1,
+      "supersedes": null,
+      "superseded_by": "M-02",
+      "superseded_on": "2016-04-08",
+      "claim_type": "label",
+      "topics": [
+        "kidney",
+        "renal",
+        "creatinine"
+      ],
+      "statement": "Superseded: avoid metformin when serum creatinine is 1.5 mg/dL or above in men, or 1.4 mg/dL or above in women.",
+      "population": "Patients with reduced kidney function.",
+      "intervention": "Metformin hydrochloride",
+      "comparator": null,
+      "outcome": "Lactic acidosis risk management",
+      "outcome_role": null,
+      "study_design": "Label (before April 2016)",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "Withdrawn label wording."
+      },
+      "qualifiers": [],
+      "stale_markers": [
+        "serum creatinine",
+        "creatinine 1.5",
+        "1.5 mg/dl",
+        "1.4 mg/dl",
+        "creatinine of 1.5",
+        "creatinine ≥1.5",
+        "creatinine >= 1.5"
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "not_applicable",
+          "label_source": "Withdrawn in 2016"
+        },
+        "UK": {
+          "status": "not_applicable",
+          "label_source": null
+        },
+        "DE": {
+          "status": "not_applicable",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "FDA Drug Safety Communication, 8 April 2016",
+          "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-revises-warnings-regarding-use-diabetes-medicine-metformin-certain"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 3650,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:36d54cf439abde6d1b542166333d7b53a6ff64d2bd401416f96d4ebd284b8f80"
+    },
+    {
+      "claim_id": "M-03",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "label",
+      "topics": [
+        "contrast",
+        "iodinated contrast",
+        "imaging",
+        "ct scan",
+        "radiology",
+        "procedure"
+      ],
+      "statement": "Stop metformin at the time of, or before, an iodinated contrast imaging procedure in patients with an eGFR between 30 and 60, a history of liver disease, alcoholism or heart failure, or who will receive intra-arterial contrast. Re-evaluate eGFR 48 hours after the procedure and restart if kidney function is stable.",
+      "population": "Patients having iodinated contrast imaging who are in the listed risk groups.",
+      "intervention": "Metformin hydrochloride",
+      "comparator": null,
+      "outcome": "Lactic acidosis risk management",
+      "outcome_role": null,
+      "study_design": "Label",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "Regulatory label text."
+      },
+      "qualifiers": [
+        {
+          "text": "Applies to the listed risk groups, not to every patient having contrast.",
+          "any_of": [
+            "30 and 60",
+            "30 to 60",
+            "30-60",
+            "liver disease",
+            "heart failure",
+            "intra-arterial",
+            "risk group"
+          ]
+        },
+        {
+          "text": "Restart after rechecking eGFR at 48 hours, if kidney function is stable.",
+          "any_of": [
+            "48 hours",
+            "48 h",
+            "recheck",
+            "re-evaluate"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "approved",
+          "label_source": "DailyMed metformin hydrochloride tablets, section 2.4"
+        },
+        "UK": {
+          "status": "not_verified",
+          "label_source": null
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "DailyMed: metformin hydrochloride tablet label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 180,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:f1d3b26be9c7d1efb3cd6849e604d1e874aa6b07c3e58b702e5dcd7393ccf180"
+    },
+    {
+      "claim_id": "M-04",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "label",
+      "topics": [
+        "lactic acidosis",
+        "boxed warning",
+        "safety",
+        "risk factors"
+      ],
+      "statement": "Metformin carries a boxed warning for lactic acidosis. Risk factors in the label include renal impairment, certain drugs such as carbonic anhydrase inhibitors, age 65 or over, contrast studies, surgery and other procedures, hypoxic states, excessive alcohol intake, hepatic impairment and mitochondrial diseases.",
+      "population": "All patients taking metformin.",
+      "intervention": "Metformin hydrochloride",
+      "comparator": null,
+      "outcome": "Lactic acidosis",
+      "outcome_role": null,
+      "study_design": "Label",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "Regulatory label text."
+      },
+      "qualifiers": [
+        {
+          "text": "If lactic acidosis is suspected, stop metformin and give supportive care in hospital; prompt hemodialysis is recommended.",
+          "any_of": [
+            "discontinue",
+            "stop metformin",
+            "hemodialysis",
+            "haemodialysis",
+            "hospital"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "approved",
+          "label_source": "DailyMed metformin hydrochloride tablets, boxed warning"
+        },
+        "UK": {
+          "status": "not_verified",
+          "label_source": null
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "DailyMed: metformin hydrochloride tablet label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 90,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [
+        "One generic label lists a June 2026 change to the boxed warning; confirm whether it added mitochondrial diseases to the risk factors."
+      ],
+      "digest": "sha256:bc7419f579ff3c68dd1cd133c4e88828e41d97cdb4c4484cbd0927294f374690"
+    },
+    {
+      "claim_id": "M-05",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "label",
+      "topics": [
+        "vitamin b12",
+        "b12",
+        "anemia",
+        "anaemia",
+        "monitoring"
+      ],
+      "statement": "Metformin may lower vitamin B12 levels: in 29-week trials about 7% of patients fell from normal to subnormal levels. The label advises measuring hematologic parameters yearly and vitamin B12 every 2 to 3 years.",
+      "population": "Patients taking metformin.",
+      "intervention": "Metformin hydrochloride",
+      "comparator": null,
+      "outcome": "Serum vitamin B12",
+      "outcome_role": null,
+      "study_design": "Label",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "Regulatory label text."
+      },
+      "qualifiers": [
+        {
+          "text": "Monitoring advice; the decrease appears reversible with stopping metformin or B12 supplementation.",
+          "any_of": [
+            "reversible",
+            "supplement",
+            "monitor",
+            "2 to 3 years",
+            "every 2"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "approved",
+          "label_source": "DailyMed metformin hydrochloride tablets, section 5.2"
+        },
+        "UK": {
+          "status": "not_verified",
+          "label_source": null
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "DailyMed: metformin hydrochloride tablet label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 180,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:699357a89fc697f05561e396fc9e245c072546362fcad9461d5fe50470a79402"
+    },
+    {
+      "claim_id": "M-06",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "rct",
+      "topics": [
+        "prediabetes",
+        "diabetes prevention",
+        "prevention",
+        "impaired glucose tolerance",
+        "dpp"
+      ],
+      "statement": "In the Diabetes Prevention Program (3,234 adults with impaired glucose tolerance, mean BMI 34), metformin 850 mg twice daily reduced the incidence of type 2 diabetes by 31% (95% CI 17 to 43) versus placebo over an average 2.8 years.",
+      "population": "Non-diabetic US adults at high risk: elevated fasting and post-load glucose, mean BMI 34.",
+      "intervention": "Metformin 850 mg twice daily",
+      "comparator": "Placebo (and an intensive lifestyle arm)",
+      "outcome": "Incidence of type 2 diabetes",
+      "outcome_role": "primary",
+      "study_design": "Randomised controlled trial",
+      "certainty": {
+        "rating": "moderate_to_high",
+        "reason": "Large blinded RCT; effect smaller in older and leaner participants."
+      },
+      "qualifiers": [
+        {
+          "text": "Intensive lifestyle change reduced incidence by 58% and was more effective than metformin.",
+          "any_of": [
+            "lifestyle",
+            "58%",
+            "58 %"
+          ]
+        },
+        {
+          "text": "The benefit was smaller in older and leaner people.",
+          "any_of": [
+            "older",
+            "leaner",
+            "lower bmi",
+            "body-mass",
+            "bmi"
+          ]
+        },
+        {
+          "text": "Prevention of diabetes is not in the US label; it is in some UK prolonged-release labels.",
+          "any_of": [
+            "not approved",
+            "unapproved",
+            "off-label",
+            "not in the us label",
+            "not labelled",
+            "uk label",
+            "smpc"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "unapproved",
+          "label_source": "Not in the US label (DailyMed section 1)"
+        },
+        "UK": {
+          "status": "approved",
+          "label_source": "Glucophage SR SmPC, section 4.1: reduction in the risk or delay of type 2 diabetes in adult, overweight patients with IGT and/or IFG and/or raised HbA1c at high risk, where 3 to 6 months of intensive lifestyle change has not been enough"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "Diabetes Prevention Program Research Group, NEJM 2002;346:393-403",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11832527/"
+        },
+        {
+          "title": "Glucophage SR SmPC (UK)",
+          "url": "https://www.medicines.org.uk/emc/product/6298/smpc"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 365,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [
+        "Confirm the German label status of the prevention indication."
+      ],
+      "digest": "sha256:5d0a76854acd15f10b553269695787afe304cf5b0d8df2d86357debeaee3faba"
+    },
+    {
+      "claim_id": "M-07",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "observational",
+      "topics": [
+        "cancer",
+        "cancer prevention",
+        "tumour",
+        "tumor",
+        "oncology",
+        "anticancer"
+      ],
+      "statement": "Many observational studies reported lower cancer incidence or mortality in people taking metformin, but a review found that 13 of them had immortal time bias and others had time-window or time-lag bias; the reported effects are compatible with these time-related biases.",
+      "population": "Mostly people with type 2 diabetes in observational cohorts.",
+      "intervention": "Metformin",
+      "comparator": "Other glucose-lowering treatment or none",
+      "outcome": "Cancer incidence or mortality",
+      "outcome_role": null,
+      "study_design": "Observational studies and a methodological review",
+      "certainty": {
+        "rating": "very_low",
+        "reason": "Associations prone to time-related biases; not confirmed in randomised trials (see M-08)."
+      },
+      "qualifiers": [
+        {
+          "text": "These are associations from observational studies, many affected by time-related biases.",
+          "any_of": [
+            "observational",
+            "association",
+            "associated",
+            "bias",
+            "immortal time"
+          ]
+        },
+        {
+          "text": "Not an approved use in any covered market.",
+          "any_of": [
+            "not approved",
+            "unapproved",
+            "off-label",
+            "not labelled"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "unapproved",
+          "label_source": "Not in the US label"
+        },
+        "UK": {
+          "status": "unapproved",
+          "label_source": "Not in UK SmPC section 4.1"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "Suissa & Azoulay, Metformin and the risk of cancer: time-related biases in observational studies, Diabetes Care 2012",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23173135/"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 365,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:1d4aaee80cd5a2534857e16bb61615ba5987a6e65b27d3a276fc41b8318a6b2d"
+    },
+    {
+      "claim_id": "M-08",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "rct",
+      "topics": [
+        "breast cancer",
+        "cancer",
+        "adjuvant",
+        "oncology",
+        "ma.32"
+      ],
+      "statement": "In the MA.32 trial (3,649 patients without diabetes with high-risk operable breast cancer), adding metformin 850 mg twice daily for 5 years to standard therapy did not improve invasive disease-free survival (HR 1.01, 95% CI 0.84 to 1.21).",
+      "population": "Patients without diabetes with high-risk, non-metastatic breast cancer on standard therapy.",
+      "intervention": "Metformin 850 mg twice daily for 5 years",
+      "comparator": "Placebo",
+      "outcome": "Invasive disease-free survival",
+      "outcome_role": "primary",
+      "study_design": "Randomised controlled trial",
+      "certainty": {
+        "rating": "high",
+        "reason": "Large double-blind phase 3 RCT."
+      },
+      "qualifiers": [
+        {
+          "text": "The randomised test of the observational hope was negative for its primary outcome.",
+          "any_of": [
+            "no benefit",
+            "did not improve",
+            "not improve",
+            "negative",
+            "no improvement",
+            "hr 1.01"
+          ]
+        },
+        {
+          "text": "Not an approved use in any covered market.",
+          "any_of": [
+            "not approved",
+            "unapproved",
+            "off-label",
+            "not labelled"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "unapproved",
+          "label_source": "Not in the US label"
+        },
+        "UK": {
+          "status": "unapproved",
+          "label_source": "Not in UK SmPC section 4.1"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "Goodwin et al., MA.32, JAMA 2022;327:1963-1973",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9131745"
+        },
+        {
+          "title": "ClinicalTrials.gov NCT01101438",
+          "url": "https://clinicaltrials.gov/study/NCT01101438"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 365,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:51c213d47678b0b20813ca374e7df6686a756fef74ae8a9063b8e3d4ed6e8d69"
+    },
+    {
+      "claim_id": "M-09",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "rct",
+      "topics": [
+        "long covid",
+        "covid",
+        "covid-19",
+        "post-covid",
+        "sars-cov-2",
+        "pasc"
+      ],
+      "statement": "In the COVID-OUT trial, a 14-day course of metformin started early in COVID-19 reduced provider-diagnosed long COVID by day 300 (6.3% versus 10.4%, about 41% relative reduction). The ACTIV-6 trial reported about 50% fewer clinician diagnoses of long COVID at 180 days.",
+      "population": "COVID-OUT: adults aged 30 to 85 with overweight or obesity, enrolled within 3 days of a positive test and with symptoms under 7 days.",
+      "intervention": "Metformin immediate release for 14 days",
+      "comparator": "Placebo",
+      "outcome": "Clinician-diagnosed long COVID",
+      "outcome_role": "secondary",
+      "study_design": "Randomised controlled trials",
+      "certainty": {
+        "rating": "low_to_moderate",
+        "reason": "Secondary outcomes in two RCTs; consistent direction."
+      },
+      "qualifiers": [
+        {
+          "text": "Long COVID was a secondary outcome, not the primary outcome, in COVID-OUT and in ACTIV-6.",
+          "any_of": [
+            "secondary outcome",
+            "secondary endpoint",
+            "secondary",
+            "not the primary"
+          ]
+        },
+        {
+          "text": "COVID-OUT enrolled adults with overweight or obesity, started early in the infection.",
+          "any_of": [
+            "overweight",
+            "obesity",
+            "obese",
+            "bmi",
+            "within 3 days",
+            "early"
+          ]
+        },
+        {
+          "text": "Prevention only: not tested as a treatment for existing long COVID.",
+          "any_of": [
+            "prevent",
+            "prevention",
+            "not a treatment",
+            "existing long covid",
+            "established"
+          ]
+        },
+        {
+          "text": "Not an approved use in any covered market.",
+          "any_of": [
+            "not approved",
+            "unapproved",
+            "off-label",
+            "not labelled"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "unapproved",
+          "label_source": "Not in the US label"
+        },
+        "UK": {
+          "status": "unapproved",
+          "label_source": "Not in UK SmPC section 4.1"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "Bramante et al., COVID-OUT long COVID outcome, Lancet Infect Dis 2023;23:1119-1129",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37302406/"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 180,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [
+        "Confirm the COVID-OUT primary outcome result (NEJM 2022).",
+        "Add the ACTIV-6 long COVID publication as a source once verified."
+      ],
+      "digest": "sha256:b0b8c4932a5ea99ef43d8f6d92f7c775b9ed88bfd8b15707df9ec89771c3bef6"
+    },
+    {
+      "claim_id": "M-10",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "trial_status",
+      "topics": [
+        "aging",
+        "ageing",
+        "longevity",
+        "lifespan",
+        "healthspan",
+        "tame",
+        "anti-aging"
+      ],
+      "statement": "There is no randomised evidence that metformin slows ageing in humans. The TAME trial (about 3,000 adults aged 65 to 79, 6 years) was designed to test whether it delays age-related diseases.",
+      "population": "Older adults without diabetes (planned TAME population).",
+      "intervention": "Metformin",
+      "comparator": "Placebo (planned)",
+      "outcome": "Delay of age-related diseases",
+      "outcome_role": null,
+      "study_design": "Trial design (no results)",
+      "certainty": {
+        "rating": "not_applicable",
+        "reason": "No trial results exist."
+      },
+      "qualifiers": [
+        {
+          "text": "No randomised human evidence yet; trial status must be read from the sponsor or registry, not from memory.",
+          "any_of": [
+            "no randomised",
+            "no randomized",
+            "no evidence",
+            "not yet",
+            "unproven",
+            "no results"
+          ]
+        },
+        {
+          "text": "Not an approved use in any covered market.",
+          "any_of": [
+            "not approved",
+            "unapproved",
+            "off-label",
+            "not labelled"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "unapproved",
+          "label_source": "Not in the US label"
+        },
+        "UK": {
+          "status": "unapproved",
+          "label_source": "Not in UK SmPC section 4.1"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "AFAR: The TAME Trial",
+          "url": "https://www.afar.org/research/TAME/"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 30,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [
+        "Confirm whether TAME is registered and enrolling or still fundraising."
+      ],
+      "digest": "sha256:7cc14d8026804fac87689a393bd507f01f090a2b49f0af6fc79c1a860fe4ced2"
+    },
+    {
+      "claim_id": "RWE-01",
+      "version": 1,
+      "supersedes": null,
+      "claim_type": "rwe_result",
+      "shown_only_with": "M-09",
+      "topics": [
+        "long covid",
+        "covid",
+        "covid-19",
+        "real-world evidence",
+        "target trial emulation",
+        "n3c"
+      ],
+      "statement": "In a target trial emulation in US electronic health records (N3C), metformin prescribed within 6 days of documented SARS-CoV-2 infection was associated with a lower 180-day risk of long COVID or death than comparator drugs: adjusted risk ratio 0.47 (95% CI 0.25 to 0.89), 10 of 248 versus 21 of 248 events after weighting.",
+      "population": "Adults in N3C, March 2020 to September 2023, without diabetes or other metformin indications; 50% infected in the Omicron period.",
+      "intervention": "New metformin prescription on days 0 to 6 of infection",
+      "comparator": "New prescription of fluvoxamine, fluticasone, ivermectin or montelukast (stand-ins for placebo)",
+      "outcome": "Long COVID (diagnosis code or computable phenotype) or death by day 180",
+      "outcome_role": "primary",
+      "study_design": "Target trial emulation (observational)",
+      "certainty": {
+        "rating": "low",
+        "reason": "Observational; few events; wide interval; not independently replicated."
+      },
+      "rwe": {
+        "protocol": "Emulates COVID-OUT and ACTIV-6; days 0 to 6 window chosen a priori; no registered protocol found; code at https://github.com/UMN-IHI/phastr-metformin",
+        "data_source": "National COVID Cohort Collaborative (N3C) EHR data",
+        "data_window": "2020-03-01 to 2023-09-30",
+        "diagnostics": "Entropy balancing to a standardised mean difference of 0; no vaccination data; possible undiagnosed diabetes (HbA1c 7.09 vs 5.39 before weighting).",
+        "sensitivity": "Days 0 to 14 window: aRR 0.75 (0.52 to 1.08). Omicron only: aRR 0.46 (0.14 to 1.50). E-value about 3.7 for the point estimate and 1.5 for the confidence limit nearest no effect, computed by the steward.",
+        "independence": "Lead author is the COVID-OUT principal investigator; five authors sat on the ACTIV-6 executive committee.",
+        "discrepancies": [
+          "Days 0 to 1 aRR is 0.39 in the abstract and 0.37 in the results.",
+          "The subgroup without nirmatrelvir-ritonavir reports aRR 0.48 with 95% CI 0.25 to 0.60, which looks implausible.",
+          "The conclusion says 'primarily Omicron-infected', but Table 2 shows 50% of the metformin group in the Omicron period."
+        ],
+        "release_gate": {
+          "peer_reviewed": "met",
+          "pre_specified_window": "met",
+          "precision": "not_met",
+          "independent_replication": "partial (a UK primary-care study points the same way with a different design)",
+          "investigator_independence": "not_met",
+          "decision": "Released only as supporting evidence shown beside M-09, never on its own."
+        }
+      },
+      "qualifiers": [
+        {
+          "text": "Observational emulation, not a randomised trial: an association with residual confounding possible.",
+          "any_of": [
+            "observational",
+            "emulation",
+            "association",
+            "associated",
+            "confounding"
+          ]
+        },
+        {
+          "text": "Very few events (10 in the metformin group) and a wide confidence interval.",
+          "any_of": [
+            "10 of 248",
+            "few events",
+            "small",
+            "wide",
+            "0.25 to 0.89",
+            "0.25-0.89"
+          ]
+        },
+        {
+          "text": "The outcome combines long COVID with death.",
+          "any_of": [
+            "or death",
+            "and death",
+            "death"
+          ]
+        },
+        {
+          "text": "Not significant with a 0 to 14 day window or in the Omicron period alone.",
+          "any_of": [
+            "0 to 14",
+            "0-14",
+            "omicron",
+            "window"
+          ]
+        },
+        {
+          "text": "Not independent of the trial investigators.",
+          "any_of": [
+            "investigator",
+            "independent",
+            "same authors",
+            "conflict"
+          ]
+        }
+      ],
+      "jurisdictions": {
+        "US": {
+          "status": "unapproved",
+          "label_source": "Not in the US label"
+        },
+        "UK": {
+          "status": "unapproved",
+          "label_source": "Not in UK SmPC section 4.1"
+        },
+        "DE": {
+          "status": "not_verified",
+          "label_source": null
+        }
+      },
+      "sources": [
+        {
+          "title": "Bramante et al., J Med Virol 2026;98:e71190 (open access, CC BY)",
+          "url": "https://doi.org/10.1002/jmv.71190"
+        }
+      ],
+      "verified_as_of": "2026-11-26",
+      "shelf_life_days": 90,
+      "approval": {
+        "role": "Steward approver",
+        "decision": "pending",
+        "date": null
+      },
+      "verification_notes": [],
+      "digest": "sha256:c78f54e2a9ff862d4ecd9e9c4499116d5af6bb74f10006e4ae61b5c2018bc12b"
+    }
+  ]
+}

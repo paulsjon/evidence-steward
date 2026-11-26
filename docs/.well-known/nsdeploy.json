@@ -1,0 +1,18 @@
+{
+  "protocol": "nsdeploy-link/v1",
+  "exports": [
+    {
+      "network": "metformin_evidence_steward",
+      "front_man": "evidence_steward",
+      "aliases": [
+        "metformin_evidence_steward",
+        "evidence_steward"
+      ],
+      "url": "metformin_evidence_steward"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  }
+}

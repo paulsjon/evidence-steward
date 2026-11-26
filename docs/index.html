@@ -1,2 +1,90 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Evidence Steward (work in progress)</title></head>
-<body><h1>Evidence Steward</h1><p>Work in progress. Illustrative only; not affiliated with any manufacturer; not medical advice.</p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metformin Evidence Steward</title>
+  <meta name="description" content="An illustrative evidence steward for metformin on the open agentic web: versioned claims with the qualifiers that keep them true, for people and for AI agents.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Open agentic web · Evidence stewardship demo</p>
+      <h1>Metformin Evidence Steward</h1>
+      <p class="lead">Claims about metformin, each published with the qualifiers that keep it true, its sources and the date it was last checked. People read them here. AI agents on other websites can load this steward and check their answers against it, after their visitor agrees.</p>
+      <p class="banner" role="note"><strong>Illustrative only.</strong> Not affiliated with any manufacturer. Not medical advice. Built from public labels and published studies. Jurisdiction rules are illustrative and pending legal review.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="ledger" aria-labelledby="ledger-heading">
+      <div class="section-head">
+        <h2 id="ledger-heading">The ledger</h2>
+        <p id="approval-state" class="pill pill-pending">Draft ledger: every claim is pending approval.</p>
+      </div>
+      <div class="controls">
+        <label for="jurisdiction">Show label status for</label>
+        <select id="jurisdiction">
+          <option value="unknown">All covered markets</option>
+          <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="DE">Germany</option>
+        </select>
+        <p class="hint">The market selects which label applies. "In label" means the use is in that market's label, not that this steward recommends it.</p>
+      </div>
+      <p id="ledger-status" role="status">Loading claims…</p>
+      <div id="claims" class="claims"></div>
+
+      <h3 id="superseded-heading">Superseded claims</h3>
+      <p class="hint">Kept visible, never silently deleted, so an agent that still uses one can be told what replaced it.</p>
+      <div id="superseded" class="claims"></div>
+    </section>
+
+    <section id="how" aria-labelledby="how-heading">
+      <h2 id="how-heading">How agents use this steward</h2>
+      <ol class="steps">
+        <li>An assistant on another website drafts an answer for a clinician.</li>
+        <li>With the visitor's consent, it loads this steward's agent network into the visitor's browser.</li>
+        <li>The steward checks the draft in code: dropped qualifiers, superseded claims, label status for the clinician's market, freshness and digests.</li>
+        <li>The answer goes back corrected, with a receipt listing every claim used.</li>
+      </ol>
+      <dl class="facts">
+        <dt>Network address</dt>
+        <dd><code id="network-url">https://paulsjon.github.io/evidence-steward/metformin_evidence_steward</code></dd>
+        <dt>Published ledger</dt>
+        <dd><a href="claims.json">claims.json</a> (each claim with its SHA-256 digest)</dd>
+        <dt>Shared reads</dt>
+        <dd>Steward information, claims by topic or id, and the draft check. Shared with every site, because they return only public facts.</dd>
+        <dt>Correction route</dt>
+        <dd id="correction-route"><a href="https://github.com/paulsjon/evidence-steward/issues">Public issue tracker</a></dd>
+      </dl>
+    </section>
+
+    <section id="assistant" class="assistant" aria-labelledby="assistant-heading">
+      <h2 id="assistant-heading">Ask the steward</h2>
+      <p>Ask what the evidence on metformin says for your market, or paste a draft answer to have it checked for lost context.</p>
+      <p class="assistant-note">Your messages and this page's data go to the LLM provider you choose in the settings below. Do not enter patient details.</p>
+      <p id="assistant-status" role="status">Connecting the assistant… If this message stays, the assistant could not load. You can still use the page directly.</p>
+      <div id="agent-app">
+        <div data-ns-slot="header"></div>
+        <div class="assistant-panels">
+          <div data-ns-slot="chat"></div>
+          <div data-ns-slot="agents"></div>
+        </div>
+        <div data-ns-slot="settings"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>An entry by Jon Pauls for the Open Agentic Web Challenge. Illustrative steward; not affiliated with any manufacturer; not medical advice. Report a suspected adverse reaction to your national authority: <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program">FDA MedWatch</a>, <a href="https://yellowcard.mhra.gov.uk/">MHRA Yellow Card</a> or <a href="https://www.bfarm.de/EN/Medicinal-products/Pharmacovigilance/_node.html">BfArM</a>.</p>
+      <p><a href="https://github.com/paulsjon/evidence-steward">Source on GitHub</a></p>
+    </div>
+  </footer>
+</body>
+</html>
