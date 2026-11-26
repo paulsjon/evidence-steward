@@ -1,0 +1,8 @@
+// Cloudflare Workers config for the Question Desk site (static files only, no server code).
+{
+  "name": "evidence-question-desk",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./question-desk"
+  }
+}

@@ -1,0 +1,6 @@
+/agent-manifest.json
+  Access-Control-Allow-Origin: *
+/*.network.json
+  Access-Control-Allow-Origin: *
+/links.json
+  Access-Control-Allow-Origin: *
