@@ -34,7 +34,11 @@ export class App {
    */
   static async start() {
     const select = document.querySelector("#jurisdiction");
-    document.querySelector("#approval-state").textContent = STEWARD.approval_state;
+    const state = document.querySelector("#approval-state");
+    state.textContent = STEWARD.approval_state;
+    const allApproved = CLAIMS.every((claim) => claim.approval.decision === "approved");
+    state.classList.toggle("pill-pending", !allApproved);
+    state.classList.toggle("pill-approved", allApproved);
     select.addEventListener("change", () => App.render(select.value));
     await App.render(select.value);
   }
@@ -123,7 +127,8 @@ export class App {
     if (fresh.status !== "superseded") {
       App.fact(facts, "Verified", `${fresh.verified_as_of_readable}; recheck within ${claim.shelf_life_days} days${fresh.status === "recheck_due" ? " (overdue)" : ""}`);
     }
-    App.fact(facts, "Approval", `${claim.approval.role}: ${claim.approval.decision}`);
+    const who = claim.approval.name ? ` (${claim.approval.name}, ${Ledger.readableDate(claim.approval.date)})` : "";
+    App.fact(facts, "Approval", `${claim.approval.role}: ${claim.approval.decision}${who}`);
     App.fact(facts, "Digest", (await Ledger.digest(claim)).slice(0, 23) + "…");
     card.append(facts);
 

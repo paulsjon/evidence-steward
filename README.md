@@ -22,7 +22,7 @@ Illustrative only. Not affiliated with any manufacturer. Built from public label
   - `find_claims`: claims by topic or id, with their status for the asker's declared market
   - `check_draft`: checks a draft answer for dropped qualifiers, superseded claims, status, freshness and digests
 - **Ledger:** `docs/js/claims-data.js` is the source of truth. `docs/claims.json` is the published copy with digests.
-- **Approval:** every claim is pending approval by the steward approver until it is reviewed.
+- **Approval:** every claim carries its own approval record (approver, decision, date). Ledger 0.2.0: all 12 claims approved by Jon Pauls on 27 November 2026. A changed claim goes back to pending until it is approved again.
 
 Other agent sites that call this network run it in their own visitor's browser, on that visitor's key, after a consent card. They get the three shared reads; the assistant points to this site's page for everything else.
 

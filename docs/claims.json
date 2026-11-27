@@ -5,8 +5,8 @@
     "operator": "Jon Pauls (individual demonstration entry)",
     "scope": "Metformin only: approved uses from public labels, and published evidence on uses clinicians ask about.",
     "status": "Illustrative demonstration for the Open Agentic Web Challenge. Not affiliated with any manufacturer. Not medical advice. Jurisdiction rules are illustrative and pending legal review.",
-    "ledger_version": "0.1.0",
-    "approval_state": "Draft ledger: every claim is pending approval by the steward approver.",
+    "ledger_version": "0.2.0",
+    "approval_state": "All 12 claims approved by the steward approver (Jon Pauls) on 27 November 2026.",
     "principles": [
       "A witness, not an advocate: answers only for its own claims, and only what was asked.",
       "Questions, not pushes: never volunteers information on unapproved uses.",
@@ -131,11 +131,12 @@
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:8b647df99cd5b352b287a97881f7e9410ef35965d4a1cd154936c381cf931e72"
+      "digest": "sha256:4b7a528459713f8535daa86cc1fe68f4b10c0fe4dc1a8c6a503b81698bd12207"
     },
     {
       "claim_id": "M-02",
@@ -226,11 +227,12 @@
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:5dd8a5e84861a40bf63b256258562fbb3922fc063abef049ee96d20154bea8e9"
+      "digest": "sha256:4d9b5a0c90e9aaaeb55bfc8c9f6486a1558b020d211dc35745cda437ae1be17e"
     },
     {
       "claim_id": "M-02-old",
@@ -289,11 +291,12 @@
       "shelf_life_days": 3650,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:36d54cf439abde6d1b542166333d7b53a6ff64d2bd401416f96d4ebd284b8f80"
+      "digest": "sha256:af12b0747a0a1ca65a94b922c7a287070233f3b31c3329d63af0be2fb300f55d"
     },
     {
       "claim_id": "M-03",
@@ -380,11 +383,12 @@
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:35f0f19656456fd68c97448dad46bee15a8debe56b285db31b0e000eca299020"
+      "digest": "sha256:43d2683c8a2cba55a4378638fedd950f314135e083c524291362d15f68fd71ac"
     },
     {
       "claim_id": "M-04",
@@ -460,13 +464,14 @@
       "shelf_life_days": 90,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [
         "The 2026 change added mitochondrial diseases (MELAS, MIDD) to the boxed-warning risk factors. Individual US labels carry it with dates from April to August 2026 (FDA labeling-change entry dated 11 August 2026)."
       ],
-      "digest": "sha256:b76232bf8a5749ca355b4542271510d92adcf17bae9b4dced884190c2305756a"
+      "digest": "sha256:9440de0e1f567fb62a87c206dbcbcac890b65a60a5e4306f3930b9a9af4e04f2"
     },
     {
       "claim_id": "M-05",
@@ -541,11 +546,12 @@
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:848b336374f805b5bdc4930242268f05dbcbf3595ecad6a1b59ee9712f3d8d3a"
+      "digest": "sha256:b1009882637d8e68ce68d5e43ac6590305e5bceec519a57ce7e5fbc6e16a9b9a"
     },
     {
       "claim_id": "M-06",
@@ -636,13 +642,14 @@
       "shelf_life_days": 365,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [
         "German status checked against the originator (Glucophage, Merck). German generics follow the originator; no German metformin label with a prevention indication was found."
       ],
-      "digest": "sha256:06e1c1ef5695dd6140e1afa905fcd1dd65d59da07f5a24e59037e7c9fbd43915"
+      "digest": "sha256:7cbda064b819aa493bc79c4fd0506d5355d94c8ca2e01d17f7f6e65cc6150a76"
     },
     {
       "claim_id": "M-07",
@@ -723,11 +730,12 @@
       "shelf_life_days": 365,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:329c0b7eace770ef7d88338013a8bfddbdb156290ff64c4d88d4bf011b715c52"
+      "digest": "sha256:df8d567f8c93fbe33db326daf54b981367edc90e6d835b77d90bd48f9336a3c4"
     },
     {
       "claim_id": "M-08",
@@ -812,11 +820,12 @@
       "shelf_life_days": 365,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:9034c510f396b07c5561de851c79d98983699256600dbebd42d8eb69c00008d5"
+      "digest": "sha256:503af1bf4d7e666ca2f07d6f85031f03d86d112b730e6af81903a8ff1fc164a6"
     },
     {
       "claim_id": "M-09",
@@ -938,11 +947,12 @@
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:4dc46fa04c0c152b00388e8712aea704168e4434b5ec830a1ca303ee80f1d146"
+      "digest": "sha256:573ff939d0d82ea0bf511bb313e15d6c1b8ef7f30bd1f8cc9f2f7fc2e808560f"
     },
     {
       "claim_id": "M-10",
@@ -1025,11 +1035,12 @@
       "shelf_life_days": 30,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:5418f8a2ba7d955ef3ee63d901a82fd58eb511110f0cef5b18b403e158a9a9cf"
+      "digest": "sha256:bb92f3c2d0a31395ca1bca2b53e2cec3e02c657d7cc43a316cb0413049d37732"
     },
     {
       "claim_id": "RWE-01",
@@ -1154,11 +1165,12 @@
       "shelf_life_days": 90,
       "approval": {
         "role": "Steward approver",
-        "decision": "pending",
-        "date": null
+        "name": "Jon Pauls",
+        "decision": "approved",
+        "date": "2026-11-27"
       },
       "verification_notes": [],
-      "digest": "sha256:6ea4465af6a3ca3e566994a5c71fa48be7850ab58eced2b224bb02639fcff44d"
+      "digest": "sha256:c3cb31f8a98fa8145a4a396abc4a7ec671625a35459ba471d46d86ed6da47534"
     }
   ]
 }

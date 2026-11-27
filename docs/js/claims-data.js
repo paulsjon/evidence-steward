@@ -16,8 +16,8 @@ export const STEWARD = {
   operator: "Jon Pauls (individual demonstration entry)",
   scope: "Metformin only: approved uses from public labels, and published evidence on uses clinicians ask about.",
   status: "Illustrative demonstration for the Open Agentic Web Challenge. Not affiliated with any manufacturer. Not medical advice. Jurisdiction rules are illustrative and pending legal review.",
-  ledger_version: "0.1.0",
-  approval_state: "Draft ledger: every claim is pending approval by the steward approver.",
+  ledger_version: "0.2.0",
+  approval_state: "All 12 claims approved by the steward approver (Jon Pauls) on 27 November 2026.",
   principles: [
     "A witness, not an advocate: answers only for its own claims, and only what was asked.",
     "Questions, not pushes: never volunteers information on unapproved uses.",
@@ -85,7 +85,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 180,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -119,7 +119,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 180,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -150,7 +150,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-26",
     shelf_life_days: 3650,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -183,7 +183,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 180,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -216,7 +216,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 90,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: ["The 2026 change added mitochondrial diseases (MELAS, MIDD) to the boxed-warning risk factors. Individual US labels carry it with dates from April to August 2026 (FDA labeling-change entry dated 11 August 2026)."],
   },
   {
@@ -248,7 +248,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 180,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -282,7 +282,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 365,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: ["German status checked against the originator (Glucophage, Merck). German generics follow the originator; no German metformin label with a prevention indication was found."],
   },
   {
@@ -314,7 +314,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 365,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -347,7 +347,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 365,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -384,7 +384,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 180,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -416,7 +416,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 30,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
   {
@@ -473,7 +473,7 @@ export const CLAIMS = [
     ],
     verified_as_of: "2026-11-27",
     shelf_life_days: 90,
-    approval: { role: "Steward approver", decision: "pending", date: null },
+    approval: { role: "Steward approver", name: "Jon Pauls", decision: "approved", date: "2026-11-27" },
     verification_notes: [],
   },
 ];
