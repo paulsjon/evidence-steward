@@ -288,7 +288,7 @@ export const CLAIMS = [
     certainty: { rating: "very_low", reason: "Associations prone to time-related biases; not confirmed in randomised trials (see M-08)." },
     qualifiers: [
       { text: "These are associations from observational studies, many affected by time-related biases.", any_of: ["observational", "association", "associated", "bias", "immortal time"] },
-      { text: "Not an approved use in any covered market.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
     ],
     jurisdictions: {
       US: { status: "unapproved", label_source: "Not in the US label" },
@@ -319,7 +319,7 @@ export const CLAIMS = [
     certainty: { rating: "high", reason: "Large double-blind phase 3 RCT." },
     qualifiers: [
       { text: "The randomised test of the observational hope was negative for its primary outcome.", any_of: ["no benefit", "did not improve", "not improve", "negative", "no improvement", "hr 1.01"] },
-      { text: "Not an approved use in any covered market.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
     ],
     jurisdictions: {
       US: { status: "unapproved", label_source: "Not in the US label" },
@@ -353,7 +353,7 @@ export const CLAIMS = [
       { text: "Long COVID was a secondary outcome, not the primary outcome, in COVID-OUT and in ACTIV-6.", any_of: ["secondary outcome", "secondary endpoint", "secondary", "not the primary"] },
       { text: "COVID-OUT enrolled adults with overweight or obesity, started early in the infection.", any_of: ["overweight", "obesity", "obese", "bmi", "within 3 days", "early"] },
       { text: "Prevention only: not tested as a treatment for existing long COVID.", any_of: ["prevent", "prevention", "not a treatment", "existing long covid", "established"] },
-      { text: "Not an approved use in any covered market.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
     ],
     jurisdictions: {
       US: { status: "unapproved", label_source: "Not in the US label" },
@@ -387,7 +387,7 @@ export const CLAIMS = [
     certainty: { rating: "not_applicable", reason: "No trial results exist." },
     qualifiers: [
       { text: "No randomised human evidence yet; trial status must be read from the sponsor or registry, not from memory.", any_of: ["no randomised", "no randomized", "no evidence", "not yet", "unproven", "no results"] },
-      { text: "Not an approved use in any covered market.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
     ],
     jurisdictions: {
       US: { status: "unapproved", label_source: "Not in the US label" },

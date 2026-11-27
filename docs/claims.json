@@ -594,7 +594,7 @@
           ]
         },
         {
-          "text": "Not an approved use in any covered market.",
+          "text": "Not an approved use in the US or UK label; German status not yet verified.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -631,7 +631,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:1d4aaee80cd5a2534857e16bb61615ba5987a6e65b27d3a276fc41b8318a6b2d"
+      "digest": "sha256:fd16ea20d9556605a23c44d5d328a4c70e5648127710794edee31a7ae2b03b54"
     },
     {
       "claim_id": "M-08",
@@ -669,7 +669,7 @@
           ]
         },
         {
-          "text": "Not an approved use in any covered market.",
+          "text": "Not an approved use in the US or UK label; German status not yet verified.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -710,7 +710,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:51c213d47678b0b20813ca374e7df6686a756fef74ae8a9063b8e3d4ed6e8d69"
+      "digest": "sha256:e6a3f950d4a4d22722dc44dfe4c858ef423aad0903195be4ab4d626a8ac22601"
     },
     {
       "claim_id": "M-09",
@@ -768,7 +768,7 @@
           ]
         },
         {
-          "text": "Not an approved use in any covered market.",
+          "text": "Not an approved use in the US or UK label; German status not yet verified.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -808,7 +808,7 @@
         "Confirm the COVID-OUT primary outcome result (NEJM 2022).",
         "Add the ACTIV-6 long COVID publication as a source once verified."
       ],
-      "digest": "sha256:b0b8c4932a5ea99ef43d8f6d92f7c775b9ed88bfd8b15707df9ec89771c3bef6"
+      "digest": "sha256:5a0df32b767198c69e549b658d6b332f16b2a3a0065f09e58502e8b43337a8b0"
     },
     {
       "claim_id": "M-10",
@@ -848,7 +848,7 @@
           ]
         },
         {
-          "text": "Not an approved use in any covered market.",
+          "text": "Not an approved use in the US or UK label; German status not yet verified.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -887,7 +887,7 @@
       "verification_notes": [
         "Confirm whether TAME is registered and enrolling or still fundraising."
       ],
-      "digest": "sha256:7cc14d8026804fac87689a393bd507f01f090a2b49f0af6fc79c1a860fe4ced2"
+      "digest": "sha256:3f506f05c6cc61d0ca2a76274be481a491bac148ec9068621cda8247d0c61671"
     },
     {
       "claim_id": "RWE-01",
