@@ -163,7 +163,7 @@ export class Ledger {
       outcome: claim.outcome,
       outcome_role: claim.outcome_role,
       study_design: claim.study_design,
-      certainty: claim.certainty,
+      certainty: { rating: claim.certainty.rating.replaceAll("_", " "), reason: claim.certainty.reason },
       must_travel_with: claim.qualifiers.map((qualifier) => qualifier.text),
       status: Ledger.statusFor(claim, jurisdiction),
       freshness: Ledger.freshness(claim, today),
