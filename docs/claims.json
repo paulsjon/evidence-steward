@@ -733,8 +733,8 @@
         "sars-cov-2",
         "pasc"
       ],
-      "statement": "In the COVID-OUT trial, a 14-day course of metformin started early in COVID-19 reduced provider-diagnosed long COVID by day 300 (6.3% versus 10.4%, about 41% relative reduction). The ACTIV-6 trial reported about 50% fewer clinician diagnoses of long COVID at 180 days.",
-      "population": "COVID-OUT: adults aged 30 to 85 with overweight or obesity, enrolled within 3 days of a positive test and with symptoms under 7 days.",
+      "statement": "Two randomised trials found fewer clinician-diagnosed long COVID cases after a 14-day course of metformin started early in COVID-19, as a secondary outcome. COVID-OUT: 6.3% versus 10.4% by day 300 (about 41% relative reduction); its primary outcome (hypoxemia, emergency visit, hospitalisation or death) was not significantly reduced (adjusted OR 0.84, 95% CI 0.66 to 1.09). ACTIV-6: 0.56% versus 1.17% at day 180 (relative risk 0.495, 95% credible interval 0.155 to 0.995); its primary outcome (any COVID-19 symptoms at day 180) did not meet the efficacy threshold.",
+      "population": "COVID-OUT: adults aged 30 to 85 with overweight or obesity, within 3 days of a positive test and symptoms under 7 days. ACTIV-6: 2,983 adults aged 30 or over with mild to moderate COVID-19 and symptoms for 7 days or less; 83% had prior infection or vaccination.",
       "intervention": "Metformin immediate release for 14 days",
       "comparator": "Placebo",
       "outcome": "Clinician-diagnosed long COVID",
@@ -742,27 +742,40 @@
       "study_design": "Randomised controlled trials",
       "certainty": {
         "rating": "low_to_moderate",
-        "reason": "Secondary outcomes in two RCTs; consistent direction."
+        "reason": "Secondary outcomes in two RCTs with consistent direction; primary outcomes not met; low absolute event rates in ACTIV-6."
       },
       "qualifiers": [
         {
-          "text": "Long COVID was a secondary outcome, not the primary outcome, in COVID-OUT and in ACTIV-6.",
+          "text": "Long COVID was a secondary outcome in both trials; neither trial met its primary outcome.",
           "any_of": [
             "secondary outcome",
             "secondary endpoint",
             "secondary",
+            "primary outcome",
             "not the primary"
           ]
         },
         {
-          "text": "COVID-OUT enrolled adults with overweight or obesity, started early in the infection.",
+          "text": "COVID-OUT enrolled adults with overweight or obesity; ACTIV-6 enrolled adults aged 30 or over, mostly with prior immunity. Treatment started within days of symptom onset.",
           "any_of": [
             "overweight",
             "obesity",
             "obese",
             "bmi",
             "within 3 days",
-            "early"
+            "within 7 days",
+            "early",
+            "prior immunity"
+          ]
+        },
+        {
+          "text": "In ACTIV-6 the absolute difference was small: 0.56% versus 1.17%.",
+          "any_of": [
+            "0.56%",
+            "1.17%",
+            "absolute",
+            "small difference",
+            "low event"
           ]
         },
         {
@@ -807,20 +820,25 @@
         {
           "title": "Bramante et al., COVID-OUT long COVID outcome, Lancet Infect Dis 2023;23:1119-1129",
           "url": "https://pubmed.ncbi.nlm.nih.gov/37302406/"
+        },
+        {
+          "title": "Bramante et al., COVID-OUT primary outcome, NEJM 2022;387:599-610",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9945922"
+        },
+        {
+          "title": "Bramante et al., ACTIV-6 metformin, Clin Infect Dis 2026 (NCT04885530)",
+          "url": "https://doi.org/10.1093/cid/ciag335"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
         "decision": "pending",
         "date": null
       },
-      "verification_notes": [
-        "Confirm the COVID-OUT primary outcome result (NEJM 2022).",
-        "Add the ACTIV-6 long COVID publication as a source once verified."
-      ],
-      "digest": "sha256:369ed15ca07b11ba53d7d7ad7b151a2790430ef96f568652d41ecb0c672d6cf2"
+      "verification_notes": [],
+      "digest": "sha256:84841e536d2bce296ecacfc07ea9950570a99a00029e1bfefcdd0a4143ef2f1f"
     },
     {
       "claim_id": "M-10",
@@ -836,7 +854,7 @@
         "tame",
         "anti-aging"
       ],
-      "statement": "There is no randomised evidence that metformin slows ageing in humans. The TAME trial (about 3,000 adults aged 65 to 79, 6 years) was designed to test whether it delays age-related diseases.",
+      "statement": "There is no randomised evidence that metformin slows ageing in humans. The TAME trial (about 3,000 adults aged 65 to 79, 14 sites, 6 years) was designed to test whether it delays age-related diseases; as of November 2026 its sponsor still describes it as not yet launched and fundraising.",
       "population": "Older adults without diabetes (planned TAME population).",
       "intervention": "Metformin",
       "comparator": "Placebo (planned)",
@@ -893,17 +911,15 @@
           "url": "https://www.afar.org/research/TAME/"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 30,
       "approval": {
         "role": "Steward approver",
         "decision": "pending",
         "date": null
       },
-      "verification_notes": [
-        "Confirm whether TAME is registered and enrolling or still fundraising."
-      ],
-      "digest": "sha256:f6a67032bb2b840f4afd1026bdefd5113c995ae652fd42ecaaa8d11739fd293d"
+      "verification_notes": [],
+      "digest": "sha256:ae3f4fc3c12affa6f1ea0c9b09f18f263ecbaa4b31eb2ac35f0408796c2b233e"
     },
     {
       "claim_id": "RWE-01",
