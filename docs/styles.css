@@ -37,8 +37,8 @@ main section { margin: 32px 0; }
 .claim-id { font-weight: 700; margin-right: 4px; }
 .badge { font-size: 0.78rem; padding: 2px 8px; border-radius: 6px; background: var(--wash); border: 1px solid var(--line); }
 .chip { font-size: 0.78rem; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; }
-.chip-approved { color: var(--ok); }
-.chip-unapproved { color: var(--no); }
+.chip-in_label { color: var(--ok); }
+.chip-not_in_label { color: var(--no); }
 .chip-not_verified, .chip-not_applicable { color: var(--grey); }
 .statement { margin: 0 0 10px; }
 .claim h4 { margin: 12px 0 4px; font-size: 0.9rem; }

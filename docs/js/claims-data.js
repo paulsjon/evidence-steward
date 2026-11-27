@@ -48,9 +48,9 @@ export const STEWARD = {
 };
 
 /**
- * The claims. Dates are ISO strings. "status" per jurisdiction is one of approved,
- * unapproved, not_verified or not_applicable ("approved" here means the use is in that
- * market's label, not that the steward approved the claim).
+ * The claims. Dates are ISO strings. "status" per jurisdiction is one of in_label,
+ * not_in_label, not_verified or not_applicable: whether the use or statement is in that
+ * market's label. It says nothing about whether the steward recommends anything.
  */
 export const CLAIMS = [
   {
@@ -73,8 +73,8 @@ export const CLAIMS = [
       { text: "Not indicated for type 1 diabetes.", any_of: ["type 1", "not for type 1"] },
     ],
     jurisdictions: {
-      US: { status: "approved", label_source: "DailyMed metformin hydrochloride tablets, section 1" },
-      UK: { status: "approved", label_source: "Glucophage SR SmPC, section 4.1 (adults); UK paediatric wording not yet checked" },
+      US: { status: "in_label", label_source: "DailyMed metformin hydrochloride tablets, section 1" },
+      UK: { status: "in_label", label_source: "Glucophage SR SmPC, section 4.1 (adults); UK paediatric wording not yet checked" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -104,8 +104,8 @@ export const CLAIMS = [
       { text: "Starting at eGFR 30 to 45 is not recommended, which differs from continuing in a patient already on metformin.", any_of: ["30 to 45", "30-45", "30–45", "initiation", "starting", "start"] },
     ],
     jurisdictions: {
-      US: { status: "approved", label_source: "DailyMed metformin hydrochloride tablets, sections 2.3 and 4" },
-      UK: { status: "approved", label_source: "Glucophage SR SmPC, sections 4.2 to 4.4 (contraindicated below GFR 30; dose limits by GFR band differ in wording)" },
+      US: { status: "in_label", label_source: "DailyMed metformin hydrochloride tablets, sections 2.3 and 4" },
+      UK: { status: "in_label", label_source: "Glucophage SR SmPC, sections 4.2 to 4.4 (contraindicated below GFR 30; dose limits by GFR band differ in wording)" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -167,7 +167,7 @@ export const CLAIMS = [
       { text: "Restart after rechecking eGFR at 48 hours, if kidney function is stable.", any_of: ["48 hours", "48 h", "recheck", "re-evaluate"] },
     ],
     jurisdictions: {
-      US: { status: "approved", label_source: "DailyMed metformin hydrochloride tablets, section 2.4" },
+      US: { status: "in_label", label_source: "DailyMed metformin hydrochloride tablets, section 2.4" },
       UK: { status: "not_verified", label_source: null },
       DE: { status: "not_verified", label_source: null },
     },
@@ -197,7 +197,7 @@ export const CLAIMS = [
       { text: "If lactic acidosis is suspected, stop metformin and give supportive care in hospital; prompt hemodialysis is recommended.", any_of: ["discontinue", "stop metformin", "hemodialysis", "haemodialysis", "hospital"] },
     ],
     jurisdictions: {
-      US: { status: "approved", label_source: "DailyMed metformin hydrochloride tablets, boxed warning" },
+      US: { status: "in_label", label_source: "DailyMed metformin hydrochloride tablets, boxed warning" },
       UK: { status: "not_verified", label_source: null },
       DE: { status: "not_verified", label_source: null },
     },
@@ -227,7 +227,7 @@ export const CLAIMS = [
       { text: "Monitoring advice; the decrease appears reversible with stopping metformin or B12 supplementation.", any_of: ["reversible", "supplement", "monitor", "2 to 3 years", "every 2"] },
     ],
     jurisdictions: {
-      US: { status: "approved", label_source: "DailyMed metformin hydrochloride tablets, section 5.2" },
+      US: { status: "in_label", label_source: "DailyMed metformin hydrochloride tablets, section 5.2" },
       UK: { status: "not_verified", label_source: null },
       DE: { status: "not_verified", label_source: null },
     },
@@ -259,8 +259,8 @@ export const CLAIMS = [
       { text: "Prevention of diabetes is not in the US label; it is in some UK prolonged-release labels.", any_of: ["not approved", "unapproved", "off-label", "not in the us label", "not labelled", "uk label", "smpc"] },
     ],
     jurisdictions: {
-      US: { status: "unapproved", label_source: "Not in the US label (DailyMed section 1)" },
-      UK: { status: "approved", label_source: "Glucophage SR SmPC, section 4.1: reduction in the risk or delay of type 2 diabetes in adult, overweight patients with IGT and/or IFG and/or raised HbA1c at high risk, where 3 to 6 months of intensive lifestyle change has not been enough" },
+      US: { status: "not_in_label", label_source: "Not in the US label (DailyMed section 1)" },
+      UK: { status: "in_label", label_source: "Glucophage SR SmPC, section 4.1: reduction in the risk or delay of type 2 diabetes in adult, overweight patients with IGT and/or IFG and/or raised HbA1c at high risk, where 3 to 6 months of intensive lifestyle change has not been enough" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -288,11 +288,11 @@ export const CLAIMS = [
     certainty: { rating: "very_low", reason: "Associations prone to time-related biases; not confirmed in randomised trials (see M-08)." },
     qualifiers: [
       { text: "These are associations from observational studies, many affected by time-related biases.", any_of: ["observational", "association", "associated", "bias", "immortal time"] },
-      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled", "not in the label", "not in label", "not in the us", "not in the uk"] },
     ],
     jurisdictions: {
-      US: { status: "unapproved", label_source: "Not in the US label" },
-      UK: { status: "unapproved", label_source: "Not in UK SmPC section 4.1" },
+      US: { status: "not_in_label", label_source: "Not in the US label" },
+      UK: { status: "not_in_label", label_source: "Not in UK SmPC section 4.1" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -319,11 +319,11 @@ export const CLAIMS = [
     certainty: { rating: "high", reason: "Large double-blind phase 3 RCT." },
     qualifiers: [
       { text: "The randomised test of the observational hope was negative for its primary outcome.", any_of: ["no benefit", "did not improve", "not improve", "negative", "no improvement", "hr 1.01"] },
-      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled", "not in the label", "not in label", "not in the us", "not in the uk"] },
     ],
     jurisdictions: {
-      US: { status: "unapproved", label_source: "Not in the US label" },
-      UK: { status: "unapproved", label_source: "Not in UK SmPC section 4.1" },
+      US: { status: "not_in_label", label_source: "Not in the US label" },
+      UK: { status: "not_in_label", label_source: "Not in UK SmPC section 4.1" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -353,11 +353,11 @@ export const CLAIMS = [
       { text: "Long COVID was a secondary outcome, not the primary outcome, in COVID-OUT and in ACTIV-6.", any_of: ["secondary outcome", "secondary endpoint", "secondary", "not the primary"] },
       { text: "COVID-OUT enrolled adults with overweight or obesity, started early in the infection.", any_of: ["overweight", "obesity", "obese", "bmi", "within 3 days", "early"] },
       { text: "Prevention only: not tested as a treatment for existing long COVID.", any_of: ["prevent", "prevention", "not a treatment", "existing long covid", "established"] },
-      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled", "not in the label", "not in label", "not in the us", "not in the uk"] },
     ],
     jurisdictions: {
-      US: { status: "unapproved", label_source: "Not in the US label" },
-      UK: { status: "unapproved", label_source: "Not in UK SmPC section 4.1" },
+      US: { status: "not_in_label", label_source: "Not in the US label" },
+      UK: { status: "not_in_label", label_source: "Not in UK SmPC section 4.1" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -387,11 +387,11 @@ export const CLAIMS = [
     certainty: { rating: "not_applicable", reason: "No trial results exist." },
     qualifiers: [
       { text: "No randomised human evidence yet; trial status must be read from the sponsor or registry, not from memory.", any_of: ["no randomised", "no randomized", "no evidence", "not yet", "unproven", "no results"] },
-      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled"] },
+      { text: "Not an approved use in the US or UK label; German status not yet verified.", any_of: ["not approved", "unapproved", "off-label", "not labelled", "not in the label", "not in label", "not in the us", "not in the uk"] },
     ],
     jurisdictions: {
-      US: { status: "unapproved", label_source: "Not in the US label" },
-      UK: { status: "unapproved", label_source: "Not in UK SmPC section 4.1" },
+      US: { status: "not_in_label", label_source: "Not in the US label" },
+      UK: { status: "not_in_label", label_source: "Not in UK SmPC section 4.1" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [
@@ -446,8 +446,8 @@ export const CLAIMS = [
       { text: "Not independent of the trial investigators.", any_of: ["investigator", "independent", "same authors", "conflict"] },
     ],
     jurisdictions: {
-      US: { status: "unapproved", label_source: "Not in the US label" },
-      UK: { status: "unapproved", label_source: "Not in UK SmPC section 4.1" },
+      US: { status: "not_in_label", label_source: "Not in the US label" },
+      UK: { status: "not_in_label", label_source: "Not in UK SmPC section 4.1" },
       DE: { status: "not_verified", label_source: null },
     },
     sources: [

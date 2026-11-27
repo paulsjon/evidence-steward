@@ -12,8 +12,8 @@ export class App {
    * Readable names for the label statuses.
    */
   static STATUS_LABELS = {
-    approved: "In label",
-    unapproved: "Not in label",
+    in_label: "In label",
+    not_in_label: "Not in label",
     not_verified: "Not verified",
     not_applicable: "Not applicable",
   };

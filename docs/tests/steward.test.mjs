@@ -167,7 +167,7 @@ class StewardTest {
     const m09 = result.claims_checked.find((item) => item.claim_id === "M-09");
     assert.ok(m09.dropped_qualifiers.some((text) => text.includes("secondary outcome")));
     assert.ok(m09.dropped_qualifiers.some((text) => text.includes("Not an approved use")));
-    assert.equal(m09.status.status, "unapproved");
+    assert.equal(m09.status.status, "not_in_label");
   }
 
   static async testDigestsAreStableAndPublished() {
@@ -191,8 +191,8 @@ class StewardTest {
     const us = await Ledger.findClaims({ query: "diabetes prevention", jurisdiction: "US" });
     const uk = await Ledger.findClaims({ query: "diabetes prevention", jurisdiction: "UK" });
     assert.equal(us.claims[0].claim_id, "M-06");
-    assert.equal(us.claims[0].status.status, "unapproved");
-    assert.equal(uk.claims[0].status.status, "approved");
+    assert.equal(us.claims[0].status.status, "not_in_label");
+    assert.equal(uk.claims[0].status.status, "in_label");
     assert.match(uk.claims[0].status.adverse_event_route, /Yellow Card/);
     const unknown = await Ledger.findClaims({ query: "diabetes prevention", jurisdiction: "unknown" });
     assert.match(unknown.claims[0].status.note, /no recommendation/);

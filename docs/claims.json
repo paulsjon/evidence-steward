@@ -89,11 +89,11 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "DailyMed metformin hydrochloride tablets, section 1"
         },
         "UK": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "Glucophage SR SmPC, section 4.1 (adults); UK paediatric wording not yet checked"
         },
         "DE": {
@@ -115,7 +115,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:833521819e1d316eaafd326038fa98dab1ed0919a70cc413eea555ffb2c6b23d"
+      "digest": "sha256:c0b2d93db4f16476376a6873e25bd95f3fa04d29574348c0cd5484192f7c2485"
     },
     {
       "claim_id": "M-02",
@@ -164,11 +164,11 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "DailyMed metformin hydrochloride tablets, sections 2.3 and 4"
         },
         "UK": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "Glucophage SR SmPC, sections 4.2 to 4.4 (contraindicated below GFR 30; dose limits by GFR band differ in wording)"
         },
         "DE": {
@@ -194,7 +194,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:18c3ece07e62e4a7ff51a2747219656af5f9fd5e55c63239d1ace8bd8f21dd59"
+      "digest": "sha256:2061d3ee9602d5a0f3b789ec81ba7f8017d01d2b55c99c0c79b8443a677cb563"
     },
     {
       "claim_id": "M-02-old",
@@ -308,7 +308,7 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "DailyMed metformin hydrochloride tablets, section 2.4"
         },
         "UK": {
@@ -334,7 +334,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:f1d3b26be9c7d1efb3cd6849e604d1e874aa6b07c3e58b702e5dcd7393ccf180"
+      "digest": "sha256:b35ca2400aa0dcf0254ee5e6457089d363b7aa77f6e628058d5474b00d493f85"
     },
     {
       "claim_id": "M-04",
@@ -372,7 +372,7 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "DailyMed metformin hydrochloride tablets, boxed warning"
         },
         "UK": {
@@ -400,7 +400,7 @@
       "verification_notes": [
         "One generic label lists a June 2026 change to the boxed warning; confirm whether it added mitochondrial diseases to the risk factors."
       ],
-      "digest": "sha256:bc7419f579ff3c68dd1cd133c4e88828e41d97cdb4c4484cbd0927294f374690"
+      "digest": "sha256:ff3b393251412074e3d497b2b0a5835ab9b94a040fc3f2de624700e940797516"
     },
     {
       "claim_id": "M-05",
@@ -439,7 +439,7 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "DailyMed metformin hydrochloride tablets, section 5.2"
         },
         "UK": {
@@ -465,7 +465,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:699357a89fc697f05561e396fc9e245c072546362fcad9461d5fe50470a79402"
+      "digest": "sha256:18acc6b57c9022fad67f9f5353a5a6a0554a6f6e80ebdd873e4b25fabddcfe62"
     },
     {
       "claim_id": "M-06",
@@ -524,11 +524,11 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in the US label (DailyMed section 1)"
         },
         "UK": {
-          "status": "approved",
+          "status": "in_label",
           "label_source": "Glucophage SR SmPC, section 4.1: reduction in the risk or delay of type 2 diabetes in adult, overweight patients with IGT and/or IFG and/or raised HbA1c at high risk, where 3 to 6 months of intensive lifestyle change has not been enough"
         },
         "DE": {
@@ -556,7 +556,7 @@
       "verification_notes": [
         "Confirm the German label status of the prevention indication."
       ],
-      "digest": "sha256:5d0a76854acd15f10b553269695787afe304cf5b0d8df2d86357debeaee3faba"
+      "digest": "sha256:c31639ee6a590bcf8133590598105ab19855c84be7300e15c346c715b393fae2"
     },
     {
       "claim_id": "M-07",
@@ -599,17 +599,21 @@
             "not approved",
             "unapproved",
             "off-label",
-            "not labelled"
+            "not labelled",
+            "not in the label",
+            "not in label",
+            "not in the us",
+            "not in the uk"
           ]
         }
       ],
       "jurisdictions": {
         "US": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in the US label"
         },
         "UK": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
@@ -631,7 +635,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:fd16ea20d9556605a23c44d5d328a4c70e5648127710794edee31a7ae2b03b54"
+      "digest": "sha256:b0d7b9e901b647ec169487000a2233aca19f5e45550da00e184b2879f46e1902"
     },
     {
       "claim_id": "M-08",
@@ -674,17 +678,21 @@
             "not approved",
             "unapproved",
             "off-label",
-            "not labelled"
+            "not labelled",
+            "not in the label",
+            "not in label",
+            "not in the us",
+            "not in the uk"
           ]
         }
       ],
       "jurisdictions": {
         "US": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in the US label"
         },
         "UK": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
@@ -710,7 +718,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:e6a3f950d4a4d22722dc44dfe4c858ef423aad0903195be4ab4d626a8ac22601"
+      "digest": "sha256:8d6d13ecea526a90f981e4d8cf5844add330e5e41ee49a5f0cb353ebc6b43ffc"
     },
     {
       "claim_id": "M-09",
@@ -773,17 +781,21 @@
             "not approved",
             "unapproved",
             "off-label",
-            "not labelled"
+            "not labelled",
+            "not in the label",
+            "not in label",
+            "not in the us",
+            "not in the uk"
           ]
         }
       ],
       "jurisdictions": {
         "US": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in the US label"
         },
         "UK": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
@@ -808,7 +820,7 @@
         "Confirm the COVID-OUT primary outcome result (NEJM 2022).",
         "Add the ACTIV-6 long COVID publication as a source once verified."
       ],
-      "digest": "sha256:5a0df32b767198c69e549b658d6b332f16b2a3a0065f09e58502e8b43337a8b0"
+      "digest": "sha256:369ed15ca07b11ba53d7d7ad7b151a2790430ef96f568652d41ecb0c672d6cf2"
     },
     {
       "claim_id": "M-10",
@@ -853,17 +865,21 @@
             "not approved",
             "unapproved",
             "off-label",
-            "not labelled"
+            "not labelled",
+            "not in the label",
+            "not in label",
+            "not in the us",
+            "not in the uk"
           ]
         }
       ],
       "jurisdictions": {
         "US": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in the US label"
         },
         "UK": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
@@ -887,7 +903,7 @@
       "verification_notes": [
         "Confirm whether TAME is registered and enrolling or still fundraising."
       ],
-      "digest": "sha256:3f506f05c6cc61d0ca2a76274be481a491bac148ec9068621cda8247d0c61671"
+      "digest": "sha256:f6a67032bb2b840f4afd1026bdefd5113c995ae652fd42ecaaa8d11739fd293d"
     },
     {
       "claim_id": "RWE-01",
@@ -986,11 +1002,11 @@
       ],
       "jurisdictions": {
         "US": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in the US label"
         },
         "UK": {
-          "status": "unapproved",
+          "status": "not_in_label",
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
@@ -1012,7 +1028,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:c78f54e2a9ff862d4ecd9e9c4499116d5af6bb74f10006e4ae61b5c2018bc12b"
+      "digest": "sha256:99d08ade2283b2409dd95a0f2c04775618fb3fc5233bf990185c660de665cfde"
     }
   ]
 }
