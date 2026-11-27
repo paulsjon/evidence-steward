@@ -30,7 +30,7 @@
         "label": "Germany",
         "label_source": "Fachinformation (originator Glucophage, Merck)",
         "adverse_event_route": "BfArM adverse drug reaction reporting: https://www.bfarm.de/EN/Medicinal-products/Pharmacovigilance/_node.html",
-        "note": "German label status checked for M-01 and M-06 only (Glucophage Fachinformation, March 2025); other claims not yet verified."
+        "note": "Label status is taken from the originator Fachinformation (Glucophage, Merck, March 2025); German generics follow it."
       }
     },
     "correction_route": "Report a misrepresentation or ask for a correction on the steward's public issue tracker: https://github.com/paulsjon/evidence-steward/issues"
@@ -180,6 +180,18 @@
             "starting",
             "start"
           ]
+        },
+        {
+          "text": "UK and German labels set daily maximum doses by GFR band (1,000 mg at 30 to 44) instead of the US rule against starting at 30 to 45.",
+          "any_of": [
+            "germany",
+            "german",
+            "uk",
+            "1,000 mg",
+            "1000 mg",
+            "maximum dose",
+            "dose limit"
+          ]
         }
       ],
       "jurisdictions": {
@@ -192,8 +204,8 @@
           "label_source": "Glucophage SR SmPC, sections 4.2 to 4.4 (contraindicated below GFR 30; dose limits by GFR band differ in wording)"
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), sections 4.2 to 4.4: contraindicated below GFR 30; maximum 2,000 mg/day at GFR 45 to 59 and 1,000 mg/day at 30 to 44; GFR checked at least yearly, every 3 to 6 months in higher-risk and older patients. No separate rule against starting at GFR 30 to 44."
         }
       },
       "sources": [
@@ -204,9 +216,13 @@
         {
           "title": "FDA Drug Safety Communication, 8 April 2016",
           "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-revises-warnings-regarding-use-diabetes-medicine-metformin-certain"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
@@ -214,7 +230,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:2061d3ee9602d5a0f3b789ec81ba7f8017d01d2b55c99c0c79b8443a677cb563"
+      "digest": "sha256:5dd8a5e84861a40bf63b256258562fbb3922fc063abef049ee96d20154bea8e9"
     },
     {
       "claim_id": "M-02-old",
@@ -324,6 +340,16 @@
             "recheck",
             "re-evaluate"
           ]
+        },
+        {
+          "text": "In Germany the label says to stop metformin for any intravascular iodinated contrast, not only in the US risk groups.",
+          "any_of": [
+            "germany",
+            "german",
+            "all patients",
+            "any intravascular",
+            "every patient"
+          ]
         }
       ],
       "jurisdictions": {
@@ -336,17 +362,21 @@
           "label_source": null
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), section 4.4: stop before or at the time of any intravascular iodinated contrast; restart no earlier than 48 hours after, once kidney function is rechecked and stable. Applies to all patients, not only US risk groups."
         }
       },
       "sources": [
         {
           "title": "DailyMed: metformin hydrochloride tablet label",
           "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
@@ -354,7 +384,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:b35ca2400aa0dcf0254ee5e6457089d363b7aa77f6e628058d5474b00d493f85"
+      "digest": "sha256:35f0f19656456fd68c97448dad46bee15a8debe56b285db31b0e000eca299020"
     },
     {
       "claim_id": "M-04",
@@ -471,6 +501,16 @@
             "2 to 3 years",
             "every 2"
           ]
+        },
+        {
+          "text": "The German label gives no fixed testing interval: it advises checking B12 when deficiency is suspected and considering regular checks with risk factors.",
+          "any_of": [
+            "germany",
+            "german",
+            "suspected",
+            "risk factors",
+            "interval"
+          ]
         }
       ],
       "jurisdictions": {
@@ -483,17 +523,21 @@
           "label_source": null
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), sections 4.4 and 4.8: B12 decrease is common; monitor serum B12 if deficiency is suspected (e.g. anaemia, neuropathy) and consider regular checks in patients with risk factors. No fixed interval."
         }
       },
       "sources": [
         {
           "title": "DailyMed: metformin hydrochloride tablet label",
           "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59a4ccda-5487-4ac4-9373-0c0fc8b7c88b"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 180,
       "approval": {
         "role": "Steward approver",
@@ -501,7 +545,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:18acc6b57c9022fad67f9f5353a5a6a0554a6f6e80ebdd873e4b25fabddcfe62"
+      "digest": "sha256:848b336374f805b5bdc4930242268f05dbcbf3595ecad6a1b59ee9712f3d8d3a"
     },
     {
       "claim_id": "M-06",
@@ -636,7 +680,7 @@
           ]
         },
         {
-          "text": "Not an approved use in the US or UK label; German status not yet verified.",
+          "text": "Not an approved use in the US, UK or German label.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -645,7 +689,9 @@
             "not in the label",
             "not in label",
             "not in the us",
-            "not in the uk"
+            "not in the uk",
+            "not in the german",
+            "not in germany"
           ]
         }
       ],
@@ -659,17 +705,21 @@
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "not_in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), section 4.1: treatment of type 2 diabetes only"
         }
       },
       "sources": [
         {
           "title": "Suissa & Azoulay, Metformin and the risk of cancer: time-related biases in observational studies, Diabetes Care 2012",
           "url": "https://pubmed.ncbi.nlm.nih.gov/23173135/"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 365,
       "approval": {
         "role": "Steward approver",
@@ -677,7 +727,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:b0d7b9e901b647ec169487000a2233aca19f5e45550da00e184b2879f46e1902"
+      "digest": "sha256:329c0b7eace770ef7d88338013a8bfddbdb156290ff64c4d88d4bf011b715c52"
     },
     {
       "claim_id": "M-08",
@@ -715,7 +765,7 @@
           ]
         },
         {
-          "text": "Not an approved use in the US or UK label; German status not yet verified.",
+          "text": "Not an approved use in the US, UK or German label.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -724,7 +774,9 @@
             "not in the label",
             "not in label",
             "not in the us",
-            "not in the uk"
+            "not in the uk",
+            "not in the german",
+            "not in germany"
           ]
         }
       ],
@@ -738,8 +790,8 @@
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "not_in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), section 4.1: treatment of type 2 diabetes only"
         }
       },
       "sources": [
@@ -750,9 +802,13 @@
         {
           "title": "ClinicalTrials.gov NCT01101438",
           "url": "https://clinicaltrials.gov/study/NCT01101438"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 365,
       "approval": {
         "role": "Steward approver",
@@ -760,7 +816,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:8d6d13ecea526a90f981e4d8cf5844add330e5e41ee49a5f0cb353ebc6b43ffc"
+      "digest": "sha256:9034c510f396b07c5561de851c79d98983699256600dbebd42d8eb69c00008d5"
     },
     {
       "claim_id": "M-09",
@@ -831,7 +887,7 @@
           ]
         },
         {
-          "text": "Not an approved use in the US or UK label; German status not yet verified.",
+          "text": "Not an approved use in the US, UK or German label.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -840,7 +896,9 @@
             "not in the label",
             "not in label",
             "not in the us",
-            "not in the uk"
+            "not in the uk",
+            "not in the german",
+            "not in germany"
           ]
         }
       ],
@@ -854,8 +912,8 @@
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "not_in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), section 4.1: treatment of type 2 diabetes only"
         }
       },
       "sources": [
@@ -870,6 +928,10 @@
         {
           "title": "Bramante et al., ACTIV-6 metformin, Clin Infect Dis 2026 (NCT04885530)",
           "url": "https://doi.org/10.1093/cid/ciag335"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
       "verified_as_of": "2026-11-27",
@@ -880,7 +942,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:84841e536d2bce296ecacfc07ea9950570a99a00029e1bfefcdd0a4143ef2f1f"
+      "digest": "sha256:4dc46fa04c0c152b00388e8712aea704168e4434b5ec830a1ca303ee80f1d146"
     },
     {
       "claim_id": "M-10",
@@ -920,7 +982,7 @@
           ]
         },
         {
-          "text": "Not an approved use in the US or UK label; German status not yet verified.",
+          "text": "Not an approved use in the US, UK or German label.",
           "any_of": [
             "not approved",
             "unapproved",
@@ -929,7 +991,9 @@
             "not in the label",
             "not in label",
             "not in the us",
-            "not in the uk"
+            "not in the uk",
+            "not in the german",
+            "not in germany"
           ]
         }
       ],
@@ -943,14 +1007,18 @@
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "not_in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), section 4.1: treatment of type 2 diabetes only"
         }
       },
       "sources": [
         {
           "title": "AFAR: The TAME Trial",
           "url": "https://www.afar.org/research/TAME/"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
       "verified_as_of": "2026-11-27",
@@ -961,7 +1029,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:ae3f4fc3c12affa6f1ea0c9b09f18f263ecbaa4b31eb2ac35f0408796c2b233e"
+      "digest": "sha256:5418f8a2ba7d955ef3ee63d901a82fd58eb511110f0cef5b18b403e158a9a9cf"
     },
     {
       "claim_id": "RWE-01",
@@ -1068,17 +1136,21 @@
           "label_source": "Not in UK SmPC section 4.1"
         },
         "DE": {
-          "status": "not_verified",
-          "label_source": null
+          "status": "not_in_label",
+          "label_source": "Glucophage Fachinformation (Merck, March 2025), section 4.1: treatment of type 2 diabetes only"
         }
       },
       "sources": [
         {
           "title": "Bramante et al., J Med Virol 2026;98:e71190 (open access, CC BY)",
           "url": "https://doi.org/10.1002/jmv.71190"
+        },
+        {
+          "title": "Glucophage Fachinformation (Germany, Merck)",
+          "url": "https://www.fachinfo.de/pdf/000959"
         }
       ],
-      "verified_as_of": "2026-11-26",
+      "verified_as_of": "2026-11-27",
       "shelf_life_days": 90,
       "approval": {
         "role": "Steward approver",
@@ -1086,7 +1158,7 @@
         "date": null
       },
       "verification_notes": [],
-      "digest": "sha256:99d08ade2283b2409dd95a0f2c04775618fb3fc5233bf990185c660de665cfde"
+      "digest": "sha256:6ea4465af6a3ca3e566994a5c71fa48be7850ab58eced2b224bb02639fcff44d"
     }
   ]
 }
