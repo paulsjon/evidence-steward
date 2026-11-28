@@ -1,2 +1,65 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Question Desk (work in progress)</title></head>
-<body><h1>Question Desk</h1><p>Work in progress. Illustrative only; not medical advice.</p><p><small>Build check 1</small></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Question Desk</title>
+  <meta name="description" content="An illustrative medical information desk on the open agentic web: answers about metformin drafted from live public sources and checked by an evidence steward before they are shown.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="site.js"></script>
+</head>
+<body class="desk">
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Open agentic web · Evidence stewardship demo</p>
+      <h1>Evidence Question Desk</h1>
+      <p class="lead">Ask a question about metformin. The desk drafts an answer from live public sources, then asks the <a href="https://paulsjon.github.io/evidence-steward/">Metformin Evidence Steward</a> to check it for lost context, so qualifiers, superseded facts and label status survive the trip to you.</p>
+      <p class="banner" role="note"><strong>Illustrative only.</strong> Not affiliated with any manufacturer. Not medical advice. Do not enter patient details.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="assistant" class="assistant" aria-labelledby="assistant-heading">
+      <h2 id="assistant-heading">Ask the desk</h2>
+      <p>Tell the desk your market (US, UK or Germany) and ask about metformin: approved uses, warnings, or the evidence on a use such as long COVID, cancer or ageing.</p>
+      <p class="assistant-note">Your messages and the sources' data go to the LLM provider you choose in the settings below. Before the desk contacts the steward, your browser shows a card with what it will send.</p>
+      <p id="assistant-status" role="status">Connecting the assistant… If this message stays, the assistant could not load.</p>
+      <div id="agent-app">
+        <div data-ns-slot="header"></div>
+        <div class="assistant-panels">
+          <div data-ns-slot="chat"></div>
+          <div data-ns-slot="agents"></div>
+        </div>
+        <div data-ns-slot="settings"></div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-heading">
+      <h2 id="how-heading">How an answer is made</h2>
+      <ol class="steps">
+        <li><strong>Draft.</strong> The desk reads live sources: the US label (openFDA), the trial registry (ClinicalTrials.gov) and PubMed, and drafts a short answer.</li>
+        <li><strong>Consent.</strong> Your browser asks whether to contact the Metformin Evidence Steward, and shows the start of the request.</li>
+        <li><strong>Check.</strong> The steward's agents run in your browser and check the draft in code: dropped qualifiers, superseded claims, label status for your market.</li>
+        <li><strong>Answer with a receipt.</strong> You get the corrected answer, what changed, the live sources and the claim ids used.</li>
+        <li><strong>Fail closed.</strong> If the steward cannot check the draft, or you decline, the desk does not give the draft as an answer. You get only the sources.</li>
+      </ol>
+      <dl class="facts">
+        <dt>Network address</dt>
+        <dd><code>https://evidence-question-desk.paulsjon.workers.dev/evidence_question_desk</code></dd>
+        <dt>Calls</dt>
+        <dd><a href="https://paulsjon.github.io/evidence-steward/">Metformin Evidence Steward</a>, only after you agree on the card.</dd>
+        <dt>Shared reads</dt>
+        <dd>Desk information, US label sections, trial search and PubMed search. Shared with every site, because they return only public data.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>An entry by Jon Pauls for the Open Agentic Web Challenge. Illustrative; not affiliated with any manufacturer; not medical advice. Report a suspected adverse reaction to your national authority: <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program">FDA MedWatch</a>, <a href="https://yellowcard.mhra.gov.uk/">MHRA Yellow Card</a> or <a href="https://www.bfarm.de/EN/Medicinal-products/Pharmacovigilance/_node.html">BfArM</a>.</p>
+      <p><a href="https://github.com/paulsjon/evidence-steward">Source on GitHub</a></p>
+    </div>
+  </footer>
+</body>
+</html>

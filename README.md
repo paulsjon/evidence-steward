@@ -11,7 +11,7 @@ Illustrative only. Not affiliated with any manufacturer. Built from public label
 | Site | Folder | Address | Role |
 | --- | --- | --- | --- |
 | Metformin Evidence Steward | `docs/` | https://paulsjon.github.io/evidence-steward/ | Publishes versioned claims about metformin with their qualifiers, label status by market, freshness and SHA-256 digests, and an agent network that vouches for them |
-| Question Desk | `question-desk/` | https://evidence-question-desk.paulsjon.workers.dev | HCP-facing assistant that drafts answers from public sources and, with the visitor's consent, loads the steward's agents to check them (in progress) |
+| Question Desk | `question-desk/` | https://evidence-question-desk.paulsjon.workers.dev | HCP-facing assistant that drafts answers from public sources and, with the visitor's consent, loads the steward's agents to check them |
 
 ## Metformin Evidence Steward
 
@@ -44,7 +44,7 @@ docs/
   runtime/                                browser runtime from the agentic-web repository, unchanged
   tests/                                  Node tests
 tools/build_ledger.mjs                     writes docs/claims.json
-question-desk/                             the Question Desk site (in progress)
+question-desk/                             the Question Desk site (see below)
 wrangler.jsonc                             Cloudflare config for the Question Desk
 ```
 
@@ -62,6 +62,50 @@ node ../agentic-web/skills/agentify-website/scripts/serve_site.mjs docs --port 8
 ### Privacy and keys
 
 The assistant sends the visitor's messages, and the claims it reads, to the LLM provider the visitor picks in AI model settings. Do not enter patient details. To try your own key, use one with a low spending limit; afterwards select **Delete setup** under **Advanced settings (optional)** and close the tab.
+
+## Evidence Question Desk
+
+The desk is the HCP-facing side. For a question about metformin it:
+
+1. reads live public sources in the visitor's browser: the US label (openFDA), ClinicalTrials.gov and PubMed;
+2. drafts an answer of at most three sentences from those results;
+3. asks the Metformin Evidence Steward to check the draft, after the visitor agrees on the consent card;
+4. replies with the steward's corrected answer, what the check changed, the live sources, and a receipt (market, claim ids with verified-as-of dates, sources read).
+
+**Fail closed.** If the visitor declines, the steward cannot be reached, or the steward cannot vouch for the draft, the desk does not give its draft as an answer. It says the answer is not verified and gives only the sources.
+
+### Linked site
+
+- **Partner:** `https://paulsjon.github.io/evidence-steward/metformin_evidence_steward` (tool name `evidence_steward_metformin_evidence_steward`, origin listed in `allowed_peers`).
+- **Consent card:** shows "Metformin Evidence Steward", its host and the first 140 characters of the request. **Always allow** skips the card for that host until the page is reloaded.
+- **What a request contains:** `Market <US, UK, DE or unknown>. Check this draft for lost context: <draft>`. It is longer than 140 characters because it carries the draft, so the market and purpose come first. The assistant is told never to put anything about a patient in it; the runtime does not filter it, so the visitor checks the card.
+- **Where it runs:** the steward's network runs in the desk visitor's browser, on the visitor's key, with only the three reads the steward's bridge shares (steward information, claims, draft check). A call costs more than the card's token estimate.
+
+### Files
+
+```
+question-desk/
+  index.html, styles.css, favicon.svg      the page
+  site.js                                  mounts the assistant
+  site-actions.js                          the four reads the assistant uses
+  js/sources.js                            openFDA, ClinicalTrials.gov and PubMed readers (fail closed)
+  bridge/bridge-actions.js                 the same reads, shared with other sites ("*")
+  evidence_question_desk.hocon             network source (build writes the .network.json)
+  agent-manifest.json, links.json          public agent files
+  _headers                                 CORS and sandbox headers for Cloudflare
+  runtime/                                 the challenge's browser runtime, unchanged
+  tests/                                   Node tests (stubbed sources, scripted model)
+```
+
+### Build, test and serve
+
+```shell
+node ../agentic-web/skills/agentify-website/scripts/build_network.mjs question-desk/evidence_question_desk.hocon --manifest question-desk/agent-manifest.json
+(cd question-desk && node --test "tests/*.test.mjs")
+node ../agentic-web/skills/agentify-website/scripts/serve_site.mjs question-desk --port 8081 --open-as localhost
+```
+
+Pushing to `main` deploys it to the Cloudflare Worker (`wrangler.jsonc`).
 
 ## Licence and sources
 

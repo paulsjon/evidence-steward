@@ -1,0 +1,65 @@
+{
+  "brand": "Evidence Question Desk",
+  "networks": [
+    {
+      "name": "evidence_question_desk",
+      "front_man": "question_desk",
+      "hocon": "./evidence_question_desk.network.json",
+      "description": "Ask a question about metformin: the desk drafts an answer from live public sources, then has the Metformin Evidence Steward check it for lost context before you see it.",
+      "tags": ["agentified-website", "medical-information", "evidence-steward"],
+      "sample_queries": [
+        "I practise in the UK. Does metformin prevent long COVID?",
+        "I'm in the US. Is metformin approved to prevent type 2 diabetes?",
+        "Germany: what does the label say about metformin and iodinated contrast?",
+        "What trials are running on metformin and ageing?",
+        "Should my 72-year-old patient with an eGFR of 35 keep taking metformin?"
+      ]
+    }
+  ],
+  "llm_router": {
+    "base_url": "https://api.otari.ai/api/v1",
+    "mock": false,
+    "byok_router": "https://api.otari.ai/api/v1"
+  },
+  "allowed_peers": ["https://paulsjon.github.io"],
+  "peer_policy": {
+    "mode": "closed",
+    "deny_origins": [],
+    "note": "Calls the partner sites in allowed_peers (the Metformin Evidence Steward) only after the visitor agrees on a card."
+  },
+  "agent_mcp": {
+    "protocol": "nsdeploy-agent-mcp/v1",
+    "network": "evidence_question_desk",
+    "front_man": "question_desk",
+    "available": false,
+    "reason": "This is a static bundle; a public MCP facade requires an application host."
+  },
+  "theme": { "primary": "#5b3a73" },
+  "linking": {
+    "protocol": "nsdeploy-link/v1",
+    "exports": [
+      {
+        "network": "evidence_question_desk",
+        "front_man": "question_desk",
+        "aliases": ["evidence_question_desk", "question_desk"],
+        "url": "evidence_question_desk"
+      }
+    ],
+    "imports": [],
+    "link_updates": { "mode": "browser-local" }
+  },
+  "deployment": {
+    "mode": "static",
+    "self_contained_runtime": true,
+    "browser_mock": false,
+    "direct_byok": true,
+    "direct_mcp_requires_cors": true,
+    "public_mcp_facade": false
+  },
+  "actions": {
+    "version": 1,
+    "module": "./site-actions.js",
+    "bridge": "./bridge/action-bridge.html",
+    "agentTools": ["get_desk_info", "read_us_label", "search_trials", "search_pubmed"]
+  }
+}

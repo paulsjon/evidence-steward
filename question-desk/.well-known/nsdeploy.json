@@ -1,0 +1,18 @@
+{
+  "protocol": "nsdeploy-link/v1",
+  "exports": [
+    {
+      "network": "evidence_question_desk",
+      "front_man": "question_desk",
+      "aliases": [
+        "evidence_question_desk",
+        "question_desk"
+      ],
+      "url": "evidence_question_desk"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  }
+}
